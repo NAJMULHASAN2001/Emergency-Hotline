@@ -56,17 +56,13 @@ for(let callButton of callButtons){
             alert("❌You don't have sufficient coin")
             return;
         }
-
-
-
-
-
-
-
-
-
-        // console.log(getTitle, getNum, getCoinNum)
-
-        
+       // console.log(getTitle, getNum, getCoinNum)
+       
     })
 }
+
+getElement('clear-btn').addEventListener('click', function(){
+    const getHistory = getElement('history-container')
+    getHistory.innerHTML = "";
+    
+})
