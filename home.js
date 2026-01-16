@@ -63,6 +63,19 @@ for(let callButton of callButtons){
 
 getElement('clear-btn').addEventListener('click', function(){
     const getHistory = getElement('history-container')
-    getHistory.innerHTML = "";
-    
+    getHistory.innerHTML ="";
+
 })
+
+const copyButtons =document.getElementsByClassName('copy-btn')
+
+for(let copyButton of copyButtons){
+    copyButton.addEventListener('click', function(){
+        const getNum = copyButton.parentNode.parentNode.children[2].innerText
+        const copyCount =document.getElementById('copy-count').innerText;
+        const currentCount = Number(copyCount) + 1;
+        document.getElementById('copy-count').innerText = currentCount;
+        alert(`The Number has copied ${getNum}`)
+
+    })
+}
